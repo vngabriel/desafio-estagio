@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Desafio Estágio Pontotel</title>
+  </head>
+  <body>
+    <main>
+        <div id="success-msg" style="display: none" class="alert alert-success"></div>
+        <div id="danger-msg" style="display: none" class="alert alert-danger"></div>
+
+        <div class="container">
+            <div class="row text-center mt-4 pt-4 rounded">
+                <h1>Criar conta</h1>
+            </div>
+            <div class="row justify-content-center my-5 me-0">
+                <div class="col-md-6 bg-white arredondado shadow py-3 px-4">
+                    <div>
+                        <form id="signup_form" method="POST" action="http://127.0.0.1:8000/api/signup/">
+                        
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-md-11">
+                                    <h3>Dados pessoais</h3>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-md-12 mb-3">
+                                            <label for="name" class="form-label">Nome <b class="text-danger">*</b></label>
+                                            <div class="input-group justify-content-center align-items-center">
+                                                <input type="text" name="name" id="name" autocomplete="name" required class="form-control bg-light border-0 rounded shadow-sm">
+                                            </div>
+                                            <p id="name-validation-msg" class="text-danger"></p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="cpf" class="form-label">CPF <b class="text-danger">*</b></label>
+                                            <div class="input-group justify-content-center align-items-center">
+                                                <input type="text" name="cpf" id="cpf" autocomplete="cpf" required class="form-control bg-light border-0 rounded shadow-sm">
+                                            </div>
+                                            <p id="cpf-validation-msg" class="text-danger"></p>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="pis" class="form-label">PIS <b class="text-danger">*</b></label>
+                                            <div class="input-group justify-content-center align-items-center">
+                                                <input type="text" name="pis" id="pis" autocomplete="pis" required class="form-control bg-light border-0 rounded shadow-sm">
+                                            </div>
+                                            <p id="pis-validation-msg" class="text-danger"></p>
+                                        </div>
+                                    </div>
+                                    <h3>Endereço</h3>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="country" class="form-label">País <b class="text-danger">*</b></label>
+                                            <div class="input-group justify-content-center align-items-center">
+                                                <input type="text" name="country" id="country" autocomplete="country" required class="form-control bg-light border-0 rounded shadow-sm">
+                                            </div>
+                                            <p id="country-validation-msg" class="text-danger"></p>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="state" class="form-label">Estado <b class="text-danger">*</b></label>
+                                            <div class="input-group justify-content-center align-items-center">
+                                                <input type="text" name="state" id="state" autocomplete="state" required class="form-control bg-light border-0 rounded shadow-sm">
+                                            </div>
+                                            <p id="state-validation-msg" class="text-danger"></p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="city" class="form-label">Cidade <b class="text-danger">*</b></label>
+                                            <div class="input-group justify-content-center align-items-center">
+                                                <input type="text" name="city" id="city" autocomplete="city" required class="form-control bg-light border-0 rounded shadow-sm">
+                                            </div>
+                                            <p id="city-validation-msg" class="text-danger"></p>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="zipcode" class="form-label">CEP <b class="text-danger">*</b></label>
+                                            <div class="input-group justify-content-center align-items-center">
+                                                <input type="text" name="zipcode" id="zipcode" autocomplete="zipcode" required class="form-control bg-light border-0 rounded shadow-sm">
+                                            </div>
+                                            <p id="zipcode-validation-msg" class="text-danger"></p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="street" class="form-label">Rua <b class="text-danger">*</b></label>
+                                            <div class="input-group justify-content-center align-items-center">
+                                                <input type="text" name="street" id="street" autocomplete="street" required class="form-control bg-light border-0 rounded shadow-sm">
+                                            </div>
+                                            <p id="street-validation-msg" class="text-danger"></p>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="number" class="form-label">Número <b class="text-danger">*</b></label>
+                                            <div class="input-group justify-content-center align-items-center">
+                                                <input type="text" name="number" id="number" autocomplete="number" required class="form-control bg-light border-0 rounded shadow-sm">
+                                            </div>
+                                            <p id="number-validation-msg" class="text-danger"></p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 mb-3">
+                                            <label for="complement" class="form-label">Complemento</label>
+                                            <div class="input-group justify-content-center align-items-center">
+                                                <input type="text" name="complement" id="complement" autocomplete="complement" class="form-control bg-light border-0 rounded shadow-sm">
+                                            </div>
+                                            <p id="complement-validation-msg" class="text-danger"></p>
+                                        </div>
+                                    </div>
+                                    <h3>Dados da conta</h3>
+                                    <hr>
+                                    <div class="row mt-3">
+                                        <div class="col-md-12 mb-3">
+                                            <label for="email" class="form-label">E-mail <b class="text-danger">*</b></label>
+                                            <div class="input-group justify-content-center align-items-center">
+                                                <input type="email" name="email" id="email" autocomplete="email" required class="form-control bg-light border-0 rounded shadow-sm">
+                                            </div>
+                                            <p id="email-validation-msg" class="text-danger"></p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="mb-3 col-md-6">
+                                            <label for="password" class="form-label">Senha <b class="text-danger">*</b></label>
+                                            <div class="input-group justify-content-center align-items-center">
+                                                <input type="password" name="password" id="password" autocomplete="current-password" required class="form-control bg-light border-0 rounded shadow-sm">
+                                            </div>
+                                            <p id="password-validation-msg" class="text-danger"></p>
+                                        </div>
+                                        <div class="mb-3 col-md-6">
+                                            <label for="password" class="form-label">Confirmação da senha <b class="text-danger">*</b></label>
+                                            <div class="input-group justify-content-center align-items-center">
+                                                <input type="password" name="confirmation_password" id="confirmation_password" autocomplete="confirmation_password" required class="form-control bg-light border-0 rounded shadow-sm">
+                                            </div>
+                                            <p id="confirmation_password-validation-msg" class="text-danger"></p>
+                                        </div>
+                                    </div>
+        
+                                    <div class="row mb-2 mt-2 justify-content-center mt-4">
+                                        <div class="col-md-4">
+                                            <button type="submit" class="btn btn-secondary mb-2 w-100">Criar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script type="module" src="../js/scripts/create_user.js"></script>
+  </body>
+</html>

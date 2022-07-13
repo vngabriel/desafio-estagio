@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <script type="module" src="../js/scripts/index.js"></script>
+
+        <title>Desafio Estágio Pontotel</title>
+    </head>
+    <body>
+        <main>
+            <div id="success-msg" style="display: none" class="alert alert-success"></div>
+            <div id="danger-msg" style="display: none" class="alert alert-danger"></div>
+
+            <div class="container">
+                <div class="row text-center mt-4 pt-4 rounded">
+                    <h1>Olá, visitante!</h1>
+                </div>
+                <div class="row justify-content-center my-5 me-0">
+                    <div class="col-md-6 bg-white arredondado shadow py-3 px-4">
+                        <div>
+                            <form method="POST" id="login_form" action="http://127.0.0.1:8000/api/login/">
+                            
+                                <div class="row justify-content-center align-items-center">
+                                    <div class="col-md-11">
+                                        <div class="mb-3">
+                                            <label for="username" class="form-label">E-mail, CPF ou PIS <b class="text-danger">*</b></label>
+                                            <div class="input-group justify-content-center align-items-center">
+                                                <input type="text" name="username" id="username" required autofocus class="form-control bg-light border-0 rounded shadow-sm" autocomplete="username">
+                                            </div>
+                                            <p id="login-validation-msg" class="text-danger"></p>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="password" class="form-label">Senha <b class="text-danger">*</b></label>
+                                            <div class="input-group justify-content-center align-items-center">
+                                                <input type="password" name="password" id="password" required class="form-control bg-light border-0 rounded shadow-sm" autocomplete="current-password">
+                                            </div>
+                                        </div>
+            
+                                        <div class="row mb-2 mt-2 justify-content-center mt-4">
+                                            <div class="col-md-4">
+                                                <button type="submit" class="btn btn-secondary mb-2 w-100">Login</button>
+                                                <a href="create_user.html" class="btn btn-outline-secondary w-100">Criar conta</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+
+</html>
