@@ -4,7 +4,7 @@ Para rodar a aplicação siga os seguintes passos:
 
 1. Clone o projeto
 2. Entre na pasta back-end
-3. Instale as bibliotecas para o back-end em python com o seguinte comando:
+3. Instale as bibliotecas para o back-end em python com o seguinte comando (use o virutalenv, caso queira):
 ```
     pip install -r requirements.txt
 ```
@@ -23,6 +23,6 @@ Para rodar a aplicação siga os seguintes passos:
 ``` 
 8. Rode o seguinte comando para subir o front-end:
 ```
-    live-server
+    live-server --open=/src/views/index.html --cors
 ```
 9. Agora a aplicação já deve está funcionando
